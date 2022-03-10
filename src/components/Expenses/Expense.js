@@ -1,9 +1,20 @@
 import "./Expense.css";
 import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
+import ExpensesFilter from "../ExpenseFilter/ExpenseFilter";
 
 const Expense = (props) => {
+   
+  const saveExpenseFilterDataHandler = enteredExpenseData =>{
+    const expenseFilterData ={
+      ...enteredExpenseData,
+    }
+    props.onAddFilterData(expenseFilterData);
+  }
+
   return (
+    <div>
+      <ExpensesFilter onSaveExpenseFilterData = {saveExpenseFilterDataHandler}/>
     <Card className="expenses">
       <ExpenseItem
         title={props.data[0].title}
@@ -26,6 +37,7 @@ const Expense = (props) => {
         date={props.data[3].date}
       />
     </Card>
+    </div>
   );
 };
 
