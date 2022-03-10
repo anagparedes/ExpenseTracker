@@ -30,10 +30,6 @@ const App = () => {
     console.log('In App.js');
     console.log(expense);
   }
-  const addExpenseFilterHandler = expenseByYear =>{
-    console.log('In App.js change filter by year!');
-    console.log(expenseByYear);
-  }
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler}/>
