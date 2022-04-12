@@ -7,3 +7,11 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(86,9,121,1) 58%, rgba
   max-width: 95%;
 
 }
+
+.content-message{
+  color: #3a3a3a;
+  font-size: 1rem;
+  flex: 1;
+  margin: 0 1rem;
+  color: white;
+}
